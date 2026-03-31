@@ -6,9 +6,9 @@ import CircuitBackground from "./CircuitBackground";
 
 export default function Testimonial() {
   return (
-    <section id="customers" className="py-[140px] bg-bg relative overflow-hidden">
+    <section id="customers" className="py-[80px] md:py-[140px] bg-bg relative overflow-hidden">
       <CircuitBackground variant="testimonial" className="opacity-40" />
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 relative z-10">
         <ScrollReveal className="max-w-[900px] mx-auto text-center">
           <p className="text-[12px] text-white tracking-[0.08em] uppercase mb-12 font-medium">Cộng đồng nói gì</p>
 
@@ -66,7 +66,7 @@ export default function Testimonial() {
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-[9px] px-2 py-0.5 font-medium" style={{ backgroundColor: `${t.color}15`, color: t.color }}>{t.category}</span>
                 </div>
-                <p className="text-[13px] text-text-secondary leading-[1.7] mb-5 flex-1">&ldquo;{t.quote}&rdquo;</p>
+                <p className="text-[14px] text-text-secondary leading-[1.7] mb-5 flex-1">&ldquo;{t.quote}&rdquo;</p>
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-8 h-8 flex items-center justify-center" style={{ backgroundColor: `${t.color}20` }}>
                     <span className="text-[10px] font-bold" style={{ color: t.color }}>{t.initials}</span>
@@ -78,7 +78,7 @@ export default function Testimonial() {
                 </div>
                 <div className="flex gap-1.5">
                   {t.modules.map((p) => (
-                    <span key={p} className="text-[9px] px-2 py-0.5 bg-bg-tertiary text-text-tertiary font-medium">{p}</span>
+                    <span key={p} className="text-[10px] px-2 py-0.5 bg-bg-tertiary text-text-tertiary font-medium">{p}</span>
                   ))}
                 </div>
               </motion.div>

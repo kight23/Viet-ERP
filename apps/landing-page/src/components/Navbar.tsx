@@ -96,8 +96,8 @@ export default function Navbar() {
           </a>
         </div>
 
-        <button className="md:hidden text-text-primary" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X size={18} /> : <Menu size={18} />}
+        <button className="md:hidden text-text-primary p-2 -mr-2 min-w-[44px] min-h-[44px] flex items-center justify-center" onClick={() => setMobileOpen(!mobileOpen)}>
+          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
@@ -113,7 +113,7 @@ export default function Navbar() {
             <div className="px-6 py-5 flex flex-col gap-2">
               <div className="text-[11px] text-text-tertiary uppercase tracking-wider mb-2">Modules</div>
               {modules.slice(0, 8).map((mod) => (
-                <a key={mod.id} href={`#module-${mod.id}`} className="flex items-center gap-2 py-2 text-[14px] text-text-secondary hover:text-text-primary" onClick={() => setMobileOpen(false)}>
+                <a key={mod.id} href={`#module-${mod.id}`} className="flex items-center gap-3 py-2.5 text-[15px] text-text-secondary hover:text-text-primary min-h-[44px]" onClick={() => setMobileOpen(false)}>
                   <div className="w-5 h-5 flex items-center justify-center" style={{ backgroundColor: `${mod.color}15` }}>
                     <mod.icon size={12} style={{ color: mod.color }} />
                   </div>

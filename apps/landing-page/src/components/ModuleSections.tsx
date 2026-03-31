@@ -26,10 +26,10 @@ function CoreSection() {
   ];
 
   return (
-    <div ref={ref} className="py-[120px] relative overflow-hidden">
+    <div ref={ref} className="py-[80px] md:py-[120px] relative overflow-hidden">
       <CircuitBackground variant="products" className="opacity-40" />
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <ScrollReveal direction="up">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-[#22c55e]/15 flex items-center justify-center"><Calculator size={20} className="text-[#22c55e]" /></div>
@@ -42,7 +42,7 @@ function CoreSection() {
             <p className="text-[15px] text-text-secondary leading-[1.7] mb-6 max-w-[420px]">
               Tuân thủ VAS TT200, hoá đơn điện tử NĐ123, BHXH/BHYT/BHTN. Tích hợp VNPay, 20+ ngân hàng, Zalo/Facebook.
             </p>
-            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#22c55e] hover:gap-2.5 transition-all group">
+            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[14px] font-medium text-[#22c55e] hover:gap-2.5 transition-all group min-h-[44px] inline-flex items-center">
               Xem mã nguồn <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
           </ScrollReveal>
@@ -56,8 +56,8 @@ function CoreSection() {
                     {mods.map((p) => (
                       <div key={p.id} className="group/card p-4 bg-bg-tertiary/50 border border-border hover:border-[#22c55e]/30 hover:bg-[#22c55e]/5 transition-all duration-300">
                         <p.icon size={18} className="text-[#22c55e] mb-2 group-hover/card:scale-110 transition-transform" />
-                        <p className="text-[12px] font-semibold text-text-primary mb-0.5">{p.name}</p>
-                        <p className="text-[9px] text-text-tertiary">{p.desc}</p>
+                        <p className="text-[13px] font-semibold text-text-primary mb-0.5 leading-relaxed">{p.name}</p>
+                        <p className="text-[11px] text-text-tertiary leading-relaxed">{p.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -83,10 +83,10 @@ function CommerceSection() {
   ];
 
   return (
-    <div ref={ref} className="py-[120px] relative overflow-hidden">
+    <div ref={ref} className="py-[80px] md:py-[120px] relative overflow-hidden">
       <CircuitBackground variant="products" className="opacity-40" />
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <ScrollReveal delay={0.15} className="order-2 lg:order-1">
             <div style={{ perspective: "1000px" }}>
               <motion.div style={{ y }} className="relative" whileHover={{ rotateX: 10 }} transition={{ duration: 0.3 }} initial={{ rotateX: 15 }} animate={{ rotateX: 15 }}>
@@ -96,8 +96,8 @@ function CommerceSection() {
                     {mods.map((p) => (
                       <div key={p.id} className="group/card p-4 bg-bg-tertiary/50 border border-border hover:border-[#06b6d4]/30 hover:bg-[#06b6d4]/5 transition-all duration-300">
                         <p.icon size={18} className="text-[#06b6d4] mb-2 group-hover/card:scale-110 transition-transform" />
-                        <p className="text-[12px] font-semibold text-text-primary mb-0.5">{p.name}</p>
-                        <p className="text-[9px] text-text-tertiary">{p.desc}</p>
+                        <p className="text-[13px] font-semibold text-text-primary mb-0.5 leading-relaxed">{p.name}</p>
+                        <p className="text-[11px] text-text-tertiary leading-relaxed">{p.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -118,7 +118,7 @@ function CommerceSection() {
             <p className="text-[15px] text-text-secondary leading-[1.7] mb-6 max-w-[420px]">
               TMĐT tích hợp VNPay/MoMo, GHN/GHTK. OTB cho Retail/FMCG. Trade Promotion Management end-to-end.
             </p>
-            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#06b6d4] hover:gap-2.5 transition-all group">
+            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[14px] font-medium text-[#06b6d4] hover:gap-2.5 transition-all group min-h-[44px] inline-flex items-center">
               Xem mã nguồn <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
           </ScrollReveal>
@@ -139,10 +139,10 @@ function OperationsSection() {
   ];
 
   return (
-    <div ref={ref} className="py-[120px] relative overflow-hidden">
+    <div ref={ref} className="py-[80px] md:py-[120px] relative overflow-hidden">
       <CircuitBackground variant="products" className="opacity-40" />
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-[#8b5cf6]/15 flex items-center justify-center"><Factory size={20} className="text-[#8b5cf6]" /></div>
@@ -155,7 +155,7 @@ function OperationsSection() {
             <p className="text-[15px] text-text-secondary leading-[1.7] mb-6 max-w-[420px]">
               MRP/MES cho nhà máy: BOM, Work Orders, Quality Control. PM với Kanban, Gantt, Sprint planning.
             </p>
-            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#8b5cf6] hover:gap-2.5 transition-all group">
+            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[14px] font-medium text-[#8b5cf6] hover:gap-2.5 transition-all group min-h-[44px] inline-flex items-center">
               Xem mã nguồn <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
           </ScrollReveal>
@@ -169,8 +169,8 @@ function OperationsSection() {
                     {mods.map((p) => (
                       <div key={p.id} className="group/card p-4 bg-bg-tertiary/50 border border-border hover:border-[#8b5cf6]/30 hover:bg-[#8b5cf6]/5 transition-all duration-300">
                         <p.icon size={18} className="text-[#8b5cf6] mb-2 group-hover/card:scale-110 transition-transform" />
-                        <p className="text-[12px] font-semibold text-text-primary mb-0.5">{p.name}</p>
-                        <p className="text-[9px] text-text-tertiary">{p.desc}</p>
+                        <p className="text-[13px] font-semibold text-text-primary mb-0.5 leading-relaxed">{p.name}</p>
+                        <p className="text-[11px] text-text-tertiary leading-relaxed">{p.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -195,10 +195,10 @@ function IntelligenceSection() {
   ];
 
   return (
-    <div ref={ref} className="py-[120px] relative overflow-hidden">
+    <div ref={ref} className="py-[80px] md:py-[120px] relative overflow-hidden">
       <CircuitBackground variant="products" className="opacity-40" />
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <ScrollReveal delay={0.15} className="order-2 lg:order-1">
             <div style={{ perspective: "1000px" }}>
               <motion.div style={{ y }} className="relative" whileHover={{ rotateX: 10 }} transition={{ duration: 0.3 }} initial={{ rotateX: 15 }} animate={{ rotateX: 15 }}>
@@ -216,8 +216,8 @@ function IntelligenceSection() {
                       {mods.map((p) => (
                         <div key={p.id} className="group/card p-4 bg-bg-tertiary/50 border border-border hover:border-[#f59e0b]/30 hover:bg-[#f59e0b]/5 transition-all duration-300">
                           <p.icon size={18} className="text-[#f59e0b] mb-2 group-hover/card:scale-110 transition-transform" />
-                          <p className="text-[12px] font-semibold text-text-primary mb-0.5">{p.name}</p>
-                          <p className="text-[9px] text-text-tertiary">{p.desc}</p>
+                          <p className="text-[13px] font-semibold text-text-primary mb-0.5 leading-relaxed">{p.name}</p>
+                          <p className="text-[11px] text-text-tertiary leading-relaxed">{p.desc}</p>
                         </div>
                       ))}
                     </div>
@@ -239,7 +239,7 @@ function IntelligenceSection() {
             <p className="text-[15px] text-text-secondary leading-[1.7] mb-6 max-w-[420px]">
               AI phân tích Excel, screening CV tự động, dự đoán turnover, chatbot HR, workforce analytics.
             </p>
-            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#f59e0b] hover:gap-2.5 transition-all group">
+            <a href="https://github.com/nclamvn/Viet-ERP" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-[14px] font-medium text-[#f59e0b] hover:gap-2.5 transition-all group min-h-[44px] inline-flex items-center">
               Xem mã nguồn <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
           </ScrollReveal>

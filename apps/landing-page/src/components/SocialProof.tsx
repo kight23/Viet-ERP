@@ -14,9 +14,9 @@ const categoryIcons = [
 
 export default function SocialProof() {
   return (
-    <section className="py-[140px] bg-bg-secondary overflow-hidden relative">
+    <section className="py-[80px] md:py-[140px] bg-bg-secondary overflow-hidden relative">
       <CircuitBackground variant="social" className="opacity-50" />
-      <div className="max-w-[1400px] mx-auto px-6 text-center relative z-10">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 text-center relative z-10">
         <ScrollReveal>
           <div className="relative mb-12">
             <div className="flex flex-wrap items-center justify-center gap-4 max-w-[600px] mx-auto mb-10">

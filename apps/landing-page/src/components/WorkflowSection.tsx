@@ -14,9 +14,9 @@ const workflowSteps = [
 
 export default function WorkflowSection() {
   return (
-    <section className="py-[120px] relative overflow-hidden">
+    <section className="py-[80px] md:py-[120px] relative overflow-hidden">
       <CircuitBackground variant="workflow" className="opacity-50" />
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <ScrollReveal>
             <p className="text-[12px] text-white tracking-[0.08em] uppercase font-medium mb-4">

@@ -16,9 +16,9 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-[120px] bg-bg-secondary relative overflow-hidden">
+    <section id="features" className="py-[80px] md:py-[120px] bg-bg-secondary relative overflow-hidden">
       <CircuitBackground variant="features" className="opacity-60" />
-      <div className="max-w-[1400px] mx-auto px-6 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-6 relative z-10">
         <ScrollReveal className="text-center mb-16 max-w-[600px] mx-auto">
           <p className="text-[12px] text-white tracking-[0.08em] uppercase mb-4 font-medium">Platform Features</p>
           <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-bold tracking-[-0.03em] leading-[1.1] mb-4">
@@ -41,7 +41,7 @@ export default function Features() {
                   <f.icon size={18} style={{ color: f.color }} />
                 </div>
                 <h3 className="text-[15px] font-semibold mb-2 tracking-[-0.01em] text-text-primary">{f.title}</h3>
-                <p className="text-[13px] text-text-tertiary leading-[1.6]">{f.desc}</p>
+                <p className="text-[14px] text-text-tertiary leading-[1.65]">{f.desc}</p>
               </motion.div>
             </ScrollReveal>
           ))}

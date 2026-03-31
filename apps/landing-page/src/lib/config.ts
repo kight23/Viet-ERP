@@ -2,7 +2,7 @@ export const config = {
   appUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://vierp.dev',
   githubUrl: 'https://github.com/nclamvn/Viet-ERP',
   email: {
-    hello: 'hello@vierp.dev',
+    hello: 'lam.nguyen@rtrobotics.me',
     support: 'support@vierp.dev',
   },
   social: {

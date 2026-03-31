@@ -7,11 +7,11 @@ import CircuitBackground from "./CircuitBackground";
 
 export default function CTASection() {
   return (
-    <section className="py-[140px] relative overflow-hidden">
+    <section className="py-[80px] md:py-[140px] relative overflow-hidden">
       <CircuitBackground variant="cta" className="opacity-50" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,rgba(139,92,246,0.08),transparent)]" />
 
-      <div className="relative max-w-[1400px] mx-auto px-6 lg:px-8 z-10">
+      <div className="relative max-w-[1400px] mx-auto px-5 md:px-6 lg:px-8 z-10">
         <ScrollReveal className="text-center">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <p className="text-[11px] text-white/60 tracking-[0.15em] uppercase mb-5 font-medium">Start Building Today</p>
@@ -34,8 +34,8 @@ export default function CTASection() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-[13px] text-text-tertiary">
-              <a href="mailto:hello@vierp.dev" className="flex items-center gap-2 hover:text-text-secondary transition-colors">
-                <Mail size={14} /> hello@vierp.dev
+              <a href="mailto:lam.nguyen@rtrobotics.me" className="flex items-center gap-2 hover:text-text-secondary transition-colors">
+                <Mail size={14} /> lam.nguyen@rtrobotics.me
               </a>
               <span className="hidden sm:block text-border">|</span>
               <span>MIT License | 100% Open Source</span>
