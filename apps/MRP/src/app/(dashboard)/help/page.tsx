@@ -217,7 +217,7 @@ export default function HelpPage() {
 
       {/* Version Info */}
       <p className="text-center text-xs text-gray-400">
-        VietERP MRP v1.0.0 · RTRobotics © 2024
+        VietERP MRP v1.0.0 · VietERP © 2024
       </p>
     </div>
   );

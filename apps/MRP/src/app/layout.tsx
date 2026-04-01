@@ -60,8 +60,8 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
-  keywords: ['MRP', 'sản xuất', 'quản lý', 'vật tư', 'tồn kho', 'RTRobotics'],
-  authors: [{ name: 'RTRobotics' }],
+  keywords: ['MRP', 'sản xuất', 'quản lý', 'vật tư', 'tồn kho', 'VietERP'],
+  authors: [{ name: 'VietERP' }],
 };
 
 export const viewport: Viewport = {

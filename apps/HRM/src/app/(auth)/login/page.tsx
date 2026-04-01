@@ -84,8 +84,8 @@ export default function LoginPage() {
 
         <div className="relative z-10">
           <img
-            src="/logo-rtr.png"
-            alt="RTRobotics"
+            src="/logo-vierp-dark.png"
+            alt="VietERP"
             width={180}
             height={72}
             className="mb-2"
@@ -135,7 +135,7 @@ export default function LoginPage() {
               style={{ backgroundColor: "#1E3A5F" }}
             >
               <img
-                src="/logo-rtr.png"
+                src="/logo-vierp-dark.png"
                 alt="RTR"
                 width={28}
                 height={28}

@@ -127,7 +127,7 @@ export default function PublicApplyPage() {
         {/* Header */}
         <div className="text-center">
           <div className="inline-flex h-10 w-10 rounded-lg items-center justify-center text-white font-bold text-sm mb-3" style={{ backgroundColor: "#1E3A5F" }}>
-            <img src="/logo-rtr.png" alt="RTR" width={28} height={28} />
+            <img src="/logo-vierp-dark.png" alt="RTR" width={28} height={28} />
           </div>
           <h1 className="text-2xl font-bold">{jr?.title}</h1>
           <p className="text-slate-500 text-sm mt-1">

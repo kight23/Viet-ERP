@@ -134,7 +134,7 @@ function LoginContent() {
 
           {/* Content */}
           <div className="relative z-10 flex flex-col h-full justify-between text-white">
-            {/* RTRobotics Logo */}
+            {/* VietERP Logo */}
             <div className="flex items-center">
               <LogoLight height={48} width={180} className="h-10 lg:h-12 w-auto" priority />
             </div>
