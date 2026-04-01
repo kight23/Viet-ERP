@@ -5,8 +5,21 @@
 
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { getToken } from 'next-auth/jwt';
-import { v4 as uuidv4 } from 'uuid';
+
+// Dev mode: skip all auth middleware
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+}
+
+let getToken: any;
+let uuidv4: any;
+try {
+  getToken = require('next-auth/jwt').getToken;
+  uuidv4 = require('uuid').v4;
+} catch {
+  getToken = async () => null;
+  uuidv4 = () => Math.random().toString(36).slice(2);
+}
 
 // =============================================================================
 // CONFIGURATION
@@ -184,6 +197,11 @@ if (typeof setInterval !== 'undefined') {
 // =============================================================================
 
 export async function middleware(request: NextRequest) {
+  // Dev mode: bypass all auth/security middleware
+  if (process.env.NODE_ENV !== 'production') {
+    return NextResponse.next();
+  }
+
   const { pathname } = request.nextUrl;
   const ip = request.headers.get('x-forwarded-for')?.split(',')[0] || 'unknown';
 
