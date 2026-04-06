@@ -7,7 +7,6 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -228,9 +227,11 @@ model Tenant {
   emailQueue     EmailQueue[]
   emailTemplates EmailTemplate[]
   importJobs     ImportJob[]
+  importSessions ImportSession[]
   apiKeys        ApiKey[]
   webhooks       Webhook[]
   systemConfigs  SystemConfig[]
+  systemSettings SystemSetting[]
 
   // Sprint 7: Analytics
   analyticsMetrics    AnalyticsMetric[]
@@ -238,6 +239,10 @@ model Tenant {
   dashboards          Dashboard[]
   analyticsReports    AnalyticsReport[]
   salaryBenchmarks    SalaryBenchmark[]
+  kpiPeriods          KPIPeriod[]
+  kpiScores           KPIScore[]
+  disciplinaryRecords DisciplinaryRecord[]
+  salaryAdvances      SalaryAdvance[]
 
   // Sprint 8: Recruitment & Onboarding
   jobRequisitions      JobRequisition[]
@@ -369,6 +374,7 @@ model User {
   approvedAdjustments PayrollAdjustment[] @relation("AdjustmentApprover")
   createdAdjustments  PayrollAdjustment[] @relation("AdjustmentCreator")
   processedPayments   BankPaymentBatch[]  @relation("PaymentProcessor")
+  advancesApproved    SalaryAdvance[]     @relation("AdvanceApprover")
 
   // Sprint 4: ESS + Workflow
   workflowInstances   WorkflowInstance[] @relation("WorkflowRequester")
@@ -416,6 +422,10 @@ model User {
   pipsAsHrContact                PerformanceImprovementPlan[]
   pipCheckIns                    PIPCheckIn[]
 
+  // KPI Management
+  kpiPeriodsCreated  KPIPeriod[] @relation("KPICreator")
+  kpiScoresEntered   KPIScore[]  @relation("KPIEnterer")
+
   // Sprint 10: Learning & Development
   coursesCreated                  Course[]
   trainingSessionsCreated         TrainingSession[]
@@ -443,6 +453,8 @@ model User {
 
   // Phase 7: Custom Roles
   customRoles UserCustomRole[]
+
+  importSessions ImportSession[] @relation("ImportUser")
 
   @@unique([tenantId, email])
   @@map("users")
@@ -650,8 +662,11 @@ model Employee {
   managedReviews       PerformanceReview[]          @relation("ReviewManager")
   feedbackRequests     FeedbackRequest[]
   feedbacksReceived    Feedback[]                   @relation("FeedbackReceiver")
-  checkIns             CheckIn[]
-  checkInsAsManager    CheckIn[]                    @relation("CheckInManager")
+  kpiScores           KPIScore[]
+  disciplinaryRecords DisciplinaryRecord[]
+  salaryAdvances      SalaryAdvance[]
+  checkIns            CheckIn[]
+  checkInsAsManager   CheckIn[]                    @relation("CheckInManager")
   oneOnOnesAsEmployee  OneOnOne[]                   @relation("OneOnOneEmployee")
   oneOnOnesAsManager   OneOnOne[]                   @relation("OneOnOneManager")
   pips                 PerformanceImprovementPlan[]
@@ -7204,7 +7219,7 @@ enum ImportType {
   POSITIONS
 }
 
-enum ImportStatus {
+enum ImportSessionStatus {
   DRY_RUN
   PREVIEWING
   EXECUTING
@@ -7214,10 +7229,10 @@ enum ImportStatus {
 }
 
 model ImportSession {
-  id            String       @id @default(cuid())
-  tenantId      String       @map("tenant_id")
+  id            String                 @id @default(cuid())
+  tenantId      String                 @map("tenant_id")
   type          ImportType
-  status        ImportStatus @default(DRY_RUN)
+  status        ImportSessionStatus   @default(DRY_RUN)
   fileName      String       @map("file_name")
   fileSize      Int          @map("file_size")
   totalRows     Int          @map("total_rows")

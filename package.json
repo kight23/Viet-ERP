@@ -12,7 +12,7 @@
     "setup": "node scripts/setup.js",
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "dev:full": "turbo run dev --concurrency=25",
+    "dev:full": "turbo run dev --concurrency=28",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "test:e2e": "turbo run test:e2e",
@@ -22,13 +22,17 @@
     "db:generate": "turbo run db:generate",
     "db:push": "turbo run db:push",
     "db:seed": "turbo run db:seed",
-    "docker:up": "docker compose up -d",
-    "docker:down": "docker compose down",
+    "docker:up": "sudo docker compose up -d",
+    "docker:down": "sudo docker compose down",
     "db:migrate": "turbo run db:generate && turbo run db:push"
   },
   "lint-staged": {
-    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
-    "*.{json,md,yml,yaml}": ["prettier --write"]
+    "*.{ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.0",

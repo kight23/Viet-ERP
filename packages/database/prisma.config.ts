@@ -6,11 +6,11 @@ import { defineConfig } from "prisma/config";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-config({ path: join(__dirname, "../../../.env") });
+config({ path: join(__dirname, "../../.env") });
 
 export default defineConfig({
   earlyAccess: true,
-  schema: path.join(__dirname, "schema.prisma"),
+  schema: path.join(__dirname, "prisma/schema.prisma"),
   migrate: {
     adapter: async () => {
       const { PrismaPg } = await import("@prisma/adapter-pg");
